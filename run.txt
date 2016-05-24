@@ -1,0 +1,18 @@
+Number of Particles:
+300
+folder path
+/home/aledonbde/Desktop/ScaleRL/examples/QuadrupoleMCMT/traj/
+pov folder
+
+Particle Coordinate File:
+xyz_0.dat
+Initial frame to render
+0
+total frame to be taken
+46
+skip
+1
+Angle aperture
+60.0
+polygon
+4
