@@ -1,0 +1,2 @@
+gfortran -g3 -c movie.f calorder.f
+gfortran -g3 -o moviemaker movie.o calorder.o

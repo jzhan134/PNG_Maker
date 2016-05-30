@@ -51,8 +51,6 @@
 
 	close(1)
 
-      open(189,file='op0.dat')
-
 
 	OPEN(30,FILE='xyz_0.dat')	!coordinate file
 

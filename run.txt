@@ -1,5 +1,5 @@
 Number of Particles:
-300
+10
 folder path
 /home/aledonbde/Desktop/ScaleRL/examples/QuadrupoleMCMT/traj/
 pov folder
@@ -9,10 +9,10 @@ xyz_0.dat
 Initial frame to render
 0
 total frame to be taken
-46
+150
 skip
 1
 Angle aperture
 60.0
 polygon
-4
+6
