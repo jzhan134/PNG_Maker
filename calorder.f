@@ -2,7 +2,7 @@
      + np, xtemp, ytemp, phi)
             
       INTEGER, PARAMETER  ::  NMAX = 1000
-      double precision rg, psi, xmean, ymean,rxij, ryij
+      double precision rg, psi, xmean, ymean,rxij, ryij,theta
       double precision RP, rmin,accumpsir,accumpsii
       integer i,j,k, nb(nmax),np, polygon
       double precision psir(nmax), psii(nmax),psiloc(nmax),
@@ -17,7 +17,7 @@
       
 !  GET PSI6 FOR ALL PARTICLES
             if(polygon .eq. 3) then
-          scale=3
+          scale=6
       elseif(polygon .eq. 4) then
           scale=4
       elseif(polygon .eq. 6) then
@@ -34,10 +34,15 @@
                         rxij=xtemp(j)-xtemp(i)		
                         ryij=ytemp(j)-ytemp(i)
                         RP=sqrt(RXIJ**2+RYIJ**2)
+			if (scale .eq. 1) then
+				theta = atan(ryij,rxij)	
+			else
+				theta = phi(j)
+			end if
                         if (RP.le.rmin) then
                                 nb(i)=nb(i)+1
-                                psir(i)=psir(i)+cos(scale*phi(j))
-                                psii(i)=psii(i)+sin(scale*phi(j))
+                                psir(i)=psir(i)+cos(scale*theta)
+                                psii(i)=psii(i)+sin(scale*theta)			
                         end if
                 end if
             end do
